@@ -1,0 +1,110 @@
+<html><head><base href="https://pearls-diy-nails.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pearl's DIY Stick-On Nails Kit</title><style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f2f4;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .kit-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .kit-image {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .kit-details {
+    width: 45%;
+  }
+  .cta-button {
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .cta-button:hover {
+    background-color: #ff1493;
+  }
+  .nail-designs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  .nail-design {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .nail-design:hover {
+    transform: scale(1.1);
+  }
+</style></head><body>
+  <header>
+    <h1>Pearl's DIY Stick-On Nails Kit</h1>
+  </header>
+  <main>
+    <div class="kit-container">
+      <img src="nail-kit.jpg" alt="Pearl's DIY Stick-On Nails Kit with various nail designs, nail glue, and application tools" class="kit-image" width="400" height="300">
+      <div class="kit-details">
+        <h2>Create Your Perfect Manicure at Home!</h2>
+        <p>Express your unique style with Pearl's DIY Stick-On Nails Kit. Our high-quality, easy-to-apply nails will have you looking fabulous in minutes!</p>
+        <a href="/shop/diy-kit" class="cta-button">Get Your Kit Now</a>
+      </div>
+    </div>
+    <h3>Included in Your Kit:</h3>
+    <ul>
+      <li>100 premium stick-on nails in various sizes</li>
+      <li>Nail glue</li>
+      <li>Nail file</li>
+      <li>Cuticle pusher</li>
+      <li>Application instructions</li>
+    </ul>
+    <h3>Choose Your Favorite Designs:</h3>
+    <div class="nail-designs">
+      <svg class="nail-design" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10 Q50 0 90 10 Q100 75 90 140 Q50 150 10 140 Q0 75 10 10 Z" fill="#ff69b4"/>
+        <circle cx="50" cy="75" r="25" fill="white"/>
+        <path d="M40 65 Q50 85 60 65" stroke="black" stroke-width="2" fill="none"/>
+      </svg>
+      <svg class="nail-design" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10 Q50 0 90 10 Q100 75 90 140 Q50 150 10 140 Q0 75 10 10 Z" fill="#4169e1"/>
+        <path d="M25 75 L75 75 M50 50 L50 100" stroke="white" stroke-width="5"/>
+      </svg>
+      <svg class="nail-design" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 10 Q50 0 90 10 Q100 75 90 140 Q50 150 10 140 Q0 75 10 10 Z" fill="#ffd700"/>
+        <path d="M30 30 L70 120 M70 30 L30 120" stroke="black" stroke-width="3"/>
+      </svg>
+    </div>
+  </main>
+  <script>
+    document.querySelectorAll('.nail-design').forEach(design => {
+      design.addEventListener('click', () => {
+        const colors = ['#ff69b4', '#4169e1', '#ffd700', '#32cd32', '#ff4500'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        design.querySelector('path').setAttribute('fill', randomColor);
+      });
+    });
+  </script>
+</body></html>
